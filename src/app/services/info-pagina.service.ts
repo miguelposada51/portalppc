@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InfoPagina } from '../interfaces/info-pagina.interface';
+import { InfoCanales } from '../interfaces/info-canales.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ export class InfoPaginaService {
   cargada = false;
 
   equipo: any[] = [];
-  canales: any[] = [];
+  // canales: any[] = [];
+  datosCanales: InfoCanales = {};
 
   constructor( private http: HttpClient ) {
 
@@ -49,12 +51,12 @@ export class InfoPaginaService {
   private cargarCanales() {
 
     // Leer el archivo JSON
-    // this.http.get('http://ec2-3-19-66-195.us-east-2.compute.amazonaws.com:3000/station')
-    this.http.get('assets/data/canales.json')
-    .subscribe( (resp: any[]) => {
+    // this.http.get('assets/data/canales.json')
+    this.http.get('http://ec2-3-19-66-195.us-east-2.compute.amazonaws.com:3000/station')
+    .subscribe( (resp: InfoCanales) => {
 
-      this.canales =  resp.data;
-       console.log(resp.data);
+      this.datosCanales =  resp;
+       console.log(this.datosCanales);
     });
 
 

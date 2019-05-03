@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
-import { AgGridModule } from 'ag-grid-angular';
+// import { AgGridModule } from 'ag-grid-angular';
+
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -28,8 +29,8 @@ import { ItemComponent } from './pages/item/item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    AgGridModule.withComponents([])
+    HttpClientModule
+    // AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]
