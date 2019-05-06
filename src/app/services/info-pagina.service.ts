@@ -56,7 +56,8 @@ export class InfoPaginaService {
     .subscribe( (resp: InfoCanales) => {
 
       this.datosCanales =  resp;
-       console.log(this.datosCanales);
+      //  console.log('Holas: ' + this.datosCanales.data[0].availabilityWindowEnd);
+       console.log('Holas: ' + this.datosCanales);
     });
 
 

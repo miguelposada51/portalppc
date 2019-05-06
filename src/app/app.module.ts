@@ -20,6 +20,8 @@ import { ItemComponent } from './pages/item/item.component';
 // import material
 import { MatTableModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CdkTableModule} from '@angular/cdk/table';
+       import {DataSource} from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    CdkTableModule,
     // AgGridModule.withComponents([])
   ],
   providers: [],
