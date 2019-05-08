@@ -25,11 +25,11 @@ table {
   
   .example-element-diagram {
     min-width: 80px;
-    border: 2px solid black;
+    border: 0px;
     padding: 8px;
     font-weight: lighter;
     margin: 8px 0;
-    height: 104px;
+    /* height: 104px; */
   }
   
   .example-element-symbol {
@@ -46,3 +46,6 @@ table {
     opacity: 0.5;
   }
   
+  .nivTres{
+    padding-left: 20px;
+  }

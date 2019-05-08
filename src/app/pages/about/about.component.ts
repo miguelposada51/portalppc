@@ -4,17 +4,17 @@ import { HttpClient } from '@angular/common/http';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { InfoCanales } from '../../interfaces/info-canales.interface';
 
-export interface PeriodicElement {
+export interface ListadoCanales {
   availabilityWindowEnd: string;
   availabilityWindowStart: string;
   dvbLinkageId: string;
-  linearServiceType: string;
+  // linearServiceType: string;
   packagedServiceDescription: string;
-  preventEasInterruption: string;
+  // preventEasInterruption: string;
   linearServiceLocality: string;
 }
 
-let ELEMENT_DATA: PeriodicElement[] = [
+let ELEMENT_DATA: ListadoCanales[] = [
 ];
 
 @Component({
@@ -34,9 +34,8 @@ let ELEMENT_DATA: PeriodicElement[] = [
 export class AboutComponent implements OnInit {
 
   columnsToDisplay = ['availabilityWindowEnd', 'availabilityWindowStart',
-                      'dvbLinkageId', 'linearServiceType',
-                      'packagedServiceDescription', 'preventEasInterruption' ];
-  expandedElement: PeriodicElement | null;
+                      'dvbLinkageId','packagedServiceDescription', 'Action'];
+  expandedElement: ListadoCanales | null;
   dataSource = ELEMENT_DATA;
 
   constructor( public infoService: InfoPaginaService, private http: HttpClient) {

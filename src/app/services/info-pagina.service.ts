@@ -57,7 +57,7 @@ export class InfoPaginaService {
 
       this.datosCanales =  resp;
       //  console.log('Holas: ' + this.datosCanales.data[0].availabilityWindowEnd);
-       console.log('Holas: ' + this.datosCanales);
+      //  console.log('Holas: ' + this.datosCanales.data);
     });
 
 
